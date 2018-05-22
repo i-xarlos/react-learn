@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "react-learn",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,4 +14,3 @@
     "eject": "react-scripts eject"
   }
 }
-
