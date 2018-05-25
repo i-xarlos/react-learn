@@ -8,7 +8,6 @@ import AdminsListItem from './AdminsListItem'
 export default class List extends Component {
   constructor(props) {
     super(props)
-
     this.state = {
       users: ['a', 'b', 'c', 'd', 'e'],
       admin: {
@@ -19,8 +18,8 @@ export default class List extends Component {
     }
   }
 
-/*  componentDidMount() {
-   const users = 'https://jsonplaceholder.typicode.com/users'
+  componentDidMount() {
+     const users = 'https://jsonplaceholder.typicode.com/users'
    fetch(users).then(response => response.json()).then(
      data => {
        console.log(data);
@@ -31,7 +30,7 @@ export default class List extends Component {
        console.log(error);
      });
    }
-*/
+
   _handleUpdateAdmin() {
     this.setState({
       admin: {
@@ -51,7 +50,7 @@ export default class List extends Component {
     return (
       <div>
         <ul>
-          {this.state.users.map((user, i) => <UsersListItem key={i} name={user}  />)}
+          {this.state.users.map((user, i) => <UsersListItem key={i} name={user.name} />)}
         </ul>
         <button onClick={() => this._handleUpdateAdmin()}>Update admin</button>
         <button onClick={() => this._handleToggleAdmin()}>Toggle admin</button>
