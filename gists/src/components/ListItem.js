@@ -1,9 +1,8 @@
 import React from 'react'
 
-const ListItem = ({ url }) => {
-    return
-    (
-        <li> { url } </li>
+const ListItem = (props) => {
+    return(
+        <li>{props.url}</li>
     )
 } 
 

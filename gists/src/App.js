@@ -23,10 +23,10 @@ class App extends Component {
 
   render() {
     const { data } = this.state;
-    console.log(data);
+    //console.log(data);
     return (
       <div className="container">
-        <List data={data} />
+        <List data={ data } />
       </div>
     );
   }

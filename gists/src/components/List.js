@@ -6,7 +6,7 @@ class List extends Component {
         const { data } = this.props;
         return (
             <ul>
-                {data.map(gist => <p>{gist.description}</p>)}
+                {data.map((elem,i) => <ListItem key={i} {...elem}/>)}
             </ul>
         )
 
@@ -14,3 +14,5 @@ class List extends Component {
 }
 
 export default List
+
+
