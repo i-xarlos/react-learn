@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import 'bulma/css/bulma.css';
+import Buttons from './components/Buttons'
+import Heading from './components/Heading'
 
 class App extends Component {
   constructor(){
@@ -21,13 +23,15 @@ class App extends Component {
   }
 
   render() {
+    const { counter } = this.state;
     return (
       <div className="section">
         <div className="container">
           
           <h1 className="App-title">React state counter: {this.state.counter}</h1>
-          <button onClick={this.handleIncrement}>+</button>
-          <button onClick={this.handleDecrement}>-</button>
+          <Buttons 
+          increment={this.handleIncrement}
+          decrement={this.handleDecrement} />
         </div>
       
       </div>
