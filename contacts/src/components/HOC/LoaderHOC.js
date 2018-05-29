@@ -1,12 +1,22 @@
 import React, { Component  } from "react"
 
-const LoaderHOC = (WrappedComponent) => {
+const LoaderHOC = (propsName) => (WrappedComponent) => {
+
     return class extends Component {
+
+        isEmpty(prop){
+            return (
+                prop === null || 
+                prop === undefined || 
+                (prop.hasOwnProperty('length') && prop.length === 0)
+            )
+        }
+
         render(){
             return (
                 <div>
                     {
-                    this.props.contacts.length ? 
+                    !this.isEmpty( this.props[ propsName ] ) ? 
                     <WrappedComponent {...this.props} /> :
                     <div className="loader">Loading...</div>
                     }

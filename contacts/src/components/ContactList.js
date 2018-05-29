@@ -1,6 +1,8 @@
 import React from 'react'
+import LoaderHOC from './HOC/LoaderHOC'
 
 const ContacList = ({ contacts , filterText }) => {
+    
     const filteredContacts = contacts.filter(contact => (
         contact.name.indexOf(filterText) !== -1
     ))
@@ -27,4 +29,4 @@ const ContacList = ({ contacts , filterText }) => {
     )
 }
 
-export default ContacList
+export default LoaderHOC('contacts')(ContacList)

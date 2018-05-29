@@ -1,7 +1,7 @@
 import React , { Component } from 'react'
 import SearchBox from './SearchBox'
 import ContactList from './ContactList'
-import LoaderHOC from './HOC/LoaderHOC'
+
 
 class Contacts extends Component {
     state = {
@@ -28,4 +28,4 @@ class Contacts extends Component {
     }
 }
 
-export default LoaderHOC(Contacts)
+export default Contacts
