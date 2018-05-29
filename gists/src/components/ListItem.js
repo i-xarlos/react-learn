@@ -1,8 +1,8 @@
 import React from 'react'
 
 const ListItem = (props) => {
-    return(
-        <li>{props.url}</li>
+    return (
+        <li>{props.id} {props.url}</li>
     )
 } 
 

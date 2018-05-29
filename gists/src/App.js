@@ -15,7 +15,13 @@ class App extends Component {
     const gistsApi = 'https://api.github.com/users/gaearon/gists'
     fetch(gistsApi)
     .then(response => response.json())
-    .then(data => this.setState({data}))
+    .then(
+      data => {
+        console.log(data);
+        this.setState({data});
+      }
+     
+    )
     .catch(error => {
       console.log(error);
     });

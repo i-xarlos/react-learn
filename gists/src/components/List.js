@@ -5,8 +5,10 @@ class List extends Component {
     render() {
         const { data } = this.props;
         return (
-            <ul>
-                {data.map((elem,i) => <ListItem key={i} {...elem}/>)}
+            <ul> 
+                {
+                data.map((elem,i) => <ListItem key={i} {...elem}/>)
+                }
             </ul>
         )
 
