@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Contacts from './components/Contacts'
 
 class App extends Component {
+  state = {
+    contacts: []
+  }
 
   componentDidMount(){
-    const usersAPI = 'https://randomuser.me/api/?results=50&nal=pe;';
+    const usersAPI = 'https://randomuser.me/api/?results=500&nat=eu;';
     fetch(usersAPI)
       .then(response => response.json())
       .then(data => {
@@ -16,24 +20,19 @@ class App extends Component {
             {
               name: `${user.name.first} ${user.name.last}`,
               picture: `${user.picture.thumbnail}`,
+              email: `${user.email}`,
             }
           )
         )
         console.log(contacts);
-      this.setState({ contacts })
+        this.setState({ contacts })
       }).catch(e => console.log(e))
   }
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="container">
+        <Contacts contacts={this.state.contacts}/>
       </div>
     );
   }
