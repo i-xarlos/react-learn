@@ -16,9 +16,7 @@ const LoaderHOC = (propsName) => (WrappedComponent) => {
             return (
                 <div>
                     {
-                    !this.isEmpty( this.props[ propsName ] ) ? 
-                    <WrappedComponent {...this.props} /> :
-                    <div className="loader">Loading...</div>
+                    ! this.isEmpty( this.props[ propsName ] ) ? <WrappedComponent {...this.props} /> : <div className="loader">Loading...</div>
                     }
                 </div>
                

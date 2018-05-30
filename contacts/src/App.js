@@ -9,7 +9,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-    const usersAPI = 'https://randomuser.me/api/?results=500&nat=eu;';
+    const usersAPI = 'https://randomuser.me/api/?results=5000&nat=eu;';
     fetch(usersAPI)
       .then(response => response.json())
       .then(data => {
@@ -19,7 +19,7 @@ class App extends Component {
             user,
             {
               name: `${user.name.first} ${user.name.last}`,
-              picture: `${user.picture.thumbnail}`,
+              picture: `${user.picture.large}`,
               email: `${user.email}`,
             }
           )
