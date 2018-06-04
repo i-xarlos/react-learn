@@ -7,7 +7,9 @@ const ContacList = ({ contacts , filterText }) => {
         contact.name.indexOf(filterText) !== -1
     ))
 
+
     return(
+
         <ul>
             {
                 filteredContacts.map((contact) => (
