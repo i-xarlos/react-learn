@@ -1,15 +1,14 @@
-import React from 'react'
-import styles from './Button.css'
-
+import React from "react"
+import styles from "../presentational/Button.css"
 
 const Button = ({ name }) => {
-   console.log(name);
 
+    console.log(name);
     const newStyle = name === 'area51' ? styles.Button : styles.ButtonFail;
     console.log(styles.Button);
 
     return(
-        <button className={newStyle}>
+        <button className = { newStyle } >
             Click me
         </button>
     )
