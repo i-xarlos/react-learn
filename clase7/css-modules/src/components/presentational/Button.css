@@ -7,7 +7,7 @@
 }
 
 .ButtonFail {
-    
+    composes: Button;
     color: blue;
     background-color: red;
 
