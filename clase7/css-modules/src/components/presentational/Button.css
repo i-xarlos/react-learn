@@ -1,0 +1,14 @@
+.Button { 
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    border:1px solid red;
+    color: aqua;
+
+}
+
+.ButtonFail {
+    
+    color: blue;
+    background-color: red;
+
+}
